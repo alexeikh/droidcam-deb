@@ -32,11 +32,7 @@ install: build
 	dh_installdirs
 	install -Dm 644 $(CURDIR)/droidcam.svg $(CURDIR)/debian/droidcam/usr/share/icons/hicolor/scalable/apps/droidcam.svg
 	install -Dm 644 $(CURDIR)/droidcam.desktop $(CURDIR)/debian/droidcam/usr/share/applications/droidcam.desktop
-ifeq ($(DEB_HOST_ARCH),amd64)
-	install -Dm 644 $(CURDIR)/droidcam-v4l2-x64.tar.gz $(CURDIR)/debian/droidcam/opt/droidcam/droidcam-v4l2-x64.tar.gz
-else
-	install -Dm 644 $(CURDIR)/droidcam-v4l2-x86.tar.gz $(CURDIR)/debian/droidcam/opt/droidcam/droidcam-v4l2-x86.tar.gz
-endif
+	install -Dm 644 $(CURDIR)/droidcam_1593923604.zip  $(CURDIR)/debian/droidcam/opt/droidcam/droidcam_1593923604.zip
 
 # Build architecture-independent files here.
 binary-indep: build install

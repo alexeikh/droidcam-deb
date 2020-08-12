@@ -7,7 +7,7 @@ Standards-Version: 3.9.5
 
 
 Package: droidcam
-Architecture: any
+Architecture: amd64
 Depends: ${misc:Depends}, build-essential, linux-headers-generic | linux-headers-generic-pae | linux-headers-lowlatency | linux-headers-lowlatency-pae
 Description: Droidcam.
  Use your Android phone as a wireless webcam or an IP Cam!

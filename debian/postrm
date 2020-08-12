@@ -14,6 +14,7 @@ case "$1" in
       prevperm=`stat -c %a /etc/modules`
       mv /tmp/.etc.modules /etc/modules
       chmod $prevperm /etc/modules
+      rm /opt/droidcam-uninstall
     fi
   ;;
 

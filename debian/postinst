@@ -13,6 +13,7 @@ case "$1" in
     cd /opt/droidcam/
     unzip -uo droidcam_1593923604.zip
     ./install
+    ./install-sound
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)

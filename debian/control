@@ -1,13 +1,13 @@
 Source: droidcam
 Section: video
 Priority: optional
-Maintainer: Paolo Rotolo <paolorotolo@ubuntu.com>
-Build-Depends: debhelper (>= 7.0.50~)
-Standards-Version: 3.9.5
+Maintainer: Archisman Panigrahi <apandada1@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.5
 
 
 Package: droidcam
 Architecture: amd64
 Depends: ${misc:Depends}, build-essential, linux-headers-generic | linux-headers-generic-pae | linux-headers-lowlatency | linux-headers-lowlatency-pae
-Description: Droidcam.
- Use your Android phone as a wireless webcam or an IP Cam!
+Description: Use your Android phone as a wireless webcam or an IP Cam!
+ You will have to manually install headers for the current linux kernel with "sudo apt-get install linux-headers-$(uname -r)" before installing droidcam.

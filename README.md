@@ -7,7 +7,7 @@ DroidCam – Use your Android phone as a wireless webcam or an IP Cam!
 ### Installation
 - Install client app on your PC from my PPA with:
 ```
-sudo apt-get install linux-headers-$(uname -r) build-essential
+sudo apt-get install linux-headers-$(uname -r)
 sudo apt-add-repository ppa:apandada1/droidcam
 sudo apt-get update
 sudo apt-get install droidcam

@@ -1,0 +1,6 @@
+/build-stamp
+/configure-stamp
+/debian/.debhelper/
+/debian/droidcam.substvars
+/debian/droidcam/
+/debian/files

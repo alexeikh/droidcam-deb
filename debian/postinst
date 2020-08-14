@@ -6,10 +6,10 @@ case "$1" in
 
   configure)
 
-    if lsmod | grep v4l2loopback_dc >/dev/null; then
-      rmmod v4l2loopback-dc
-      rm -f /lib/modules/`uname -r`/kernel/drivers/media/video/v4l2loopback-dc.ko
-    fi
+    # if lsmod | grep v4l2loopback_dc >/dev/null; then
+    #   rmmod v4l2loopback-dc
+    #   rm -f /lib/modules/`uname -r`/kernel/drivers/media/video/v4l2loopback-dc.ko
+    # fi
     cd /opt/droidcam/
     unzip -uo droidcam_1593923604.zip
     ./install

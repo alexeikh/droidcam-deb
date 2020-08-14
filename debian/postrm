@@ -5,16 +5,19 @@ set -e
 case "$1" in
   purge|remove)
     if [ -e /opt/droidcam ]; then
+      cd /opt/droidcam
+      ./uninstall
       rm -rf /opt/droidcam
-      rmmod v4l2loopback-dc
-      rm -f /lib/modules/`uname -r`/kernel/drivers/media/video/v4l2loopback-dc.ko
-      rm -f /usr/bin/droidcam
-      rm -f /usr/bin/droidcam-cli
-      cat /etc/modules | egrep -v "^(videodev|v4l2loopback-dc)" > /tmp/.etc.modules
-      prevperm=`stat -c %a /etc/modules`
-      mv /tmp/.etc.modules /etc/modules
-      chmod $prevperm /etc/modules
       rm /opt/droidcam-uninstall
+      ##All the following are automatically managed by uninstall script
+      # rmmod v4l2loopback-dc
+      # # rm -f /usr/bin/droidcam
+      # # rm -f /usr/bin/droidcam-cli
+      # rm -f /lib/modules/`uname -r`/kernel/drivers/media/video/v4l2loopback-dc.ko
+      # cat /etc/modules | egrep -v "^(videodev|v4l2loopback-dc)" > /tmp/.etc.modules
+      # prevperm=`stat -c %a /etc/modules`
+      # mv /tmp/.etc.modules /etc/modules
+      # chmod $prevperm /etc/modules
     fi
   ;;
 
